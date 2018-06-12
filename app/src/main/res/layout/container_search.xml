@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:orientation="vertical"
+        tools:context="br.com.rafanereslima.brasilnacopa.ListResult">
+        <!--Include a toolbar-->
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/relativesearch_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/wpprcup"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/num_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:text="XX Resultados encontrados"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp">
+
+            </ScrollView>
+
+            <ListView
+                android:id="@+id/list_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:fastScrollAlwaysVisible="false" />
+
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:itemBackground="@color/white"
+                app:itemIconTint="@color/nliveo_blue_gray_colorPrimary"
+                app:itemTextColor="@color/nliveo_blue_gray_colorPrimary"
+                app:menu="@menu/bottombar_menu" />
+
+        </RelativeLayout>
+
+</LinearLayout>
